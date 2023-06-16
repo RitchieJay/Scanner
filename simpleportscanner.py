@@ -16,12 +16,10 @@ def port_scanner(port):
     if s.connect_ex((target, port)):
         print('The port is closed')
     else:
-        print('The port is closed')
-
-# scan the first 1024 ports 
-for port in range(0, 1025):
-    print(port)
-    port_scanner(port)
+        print('The port is open')
 
 if __name__ == "__main__":
-    port_scanner(port)
+# scan the first 1024 ports 
+    for port in range(0, 1025):
+        print(port)
+        port_scanner(port)
