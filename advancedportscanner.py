@@ -25,6 +25,3 @@ def port_scanner(port):
 for port in range(0, 1025):
     thread = threading.Thread(target=port_scanner, args=(port,))
     thread.start()
-    
-if __name__ == "__main__":
-    port_scanner(port)
